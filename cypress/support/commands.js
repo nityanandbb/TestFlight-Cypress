@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Importing all the util functions.
+
+// cypress/support/commands.js
+import * as utils from "./utilsLoader";
+
+Object.keys(utils).forEach((key) => {
+  Cypress.Commands.add(key, utils[key]);
+});
