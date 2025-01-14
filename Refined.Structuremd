@@ -1,0 +1,49 @@
+cypress/
+├── e2e/                      # All test-related files
+│   ├── tests/               # Actual test files
+│   │   ├── auth/           # Authentication related tests
+│   │   │   ├── login.cy.js
+│   │   │   └── logout.cy.js
+│   │   ├── cart/           # Shopping cart tests
+│   │   └── profile/        # User profile tests
+│   │
+│   ├── pageObjects/        # Page Object Models
+│   │   ├── common/         # Common/shared page objects
+│   │   │   ├── Header.js
+│   │   │   ├── Footer.js
+│   │   │   └── Navigation.js
+│   │   ├── auth/
+│   │   └── cart/
+│   │
+│   └── components/         # Reusable UI components
+│       ├── Button.js
+│       ├── Modal.js
+│       └── Form.js
+│
+├── config/                 # Configuration files
+│   ├── environment.js      # Environment configs
+│   └── tags.js            # Test tags configuration
+│
+├── support/
+│   ├── commands/          # Custom Cypress commands
+│   │   ├── authCommands.js
+│   │   └── uiCommands.js
+│   │
+│   ├── utils/            # Utility functions
+│   │   ├── testUtils.js
+│   │   ├── apiUtils.js
+│   │   └── dateUtils.js
+│   │
+│   ├── constants/        # Constants and enums
+│   │   ├── errorMessages.js
+│   │   └── routes.js
+│   │
+│   └── e2e.js           # Main support file
+│
+├── fixtures/             # Test data
+│   ├── users.json
+│   └── products.json
+│
+└── reports/             # Test reports
+    ├── screenshots/
+    └── videos/
