@@ -15,5 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import { setBaseUrl } from "../config/config";
+
+import '@cypress/grep'; // Add this line to initialize grep
+
+import { setBaseUrl } from "../config/config.js";
 setBaseUrl();
+import { TAGS, LOG_STYLES } from "../config/constants/tags.js";
+// Make constants globally available
+global.TAGS = TAGS;
+global.LOG_STYLES = LOG_STYLES;

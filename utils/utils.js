@@ -240,10 +240,10 @@ export function urlTest(fixtureFileName) {
   });
 }
 // Test urls from fixture.json array or .csv
-const { setBaseUrl } = require("../scripts/setBaseUrl");
+// const { setBaseUrl } = require("../scripts/setBaseUrl");
 
 // Call setBaseUrl function to set the base URL before running tests
-setBaseUrl();
+// setBaseUrl();
 
 export function runURLTestingFromFixtureFile(
   suiteName,

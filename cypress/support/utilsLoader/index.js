@@ -1,6 +1,6 @@
 // cypress/support/utils/index.js
 
-export * from "TestFlight-Cypress/utils/utils.js";
+export * from "../../../utils/utils.js"
 //export * from "../../utils/downloadUtils";
 // export * from "./utils1";
 // export * from "./utils2";

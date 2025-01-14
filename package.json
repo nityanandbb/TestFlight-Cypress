@@ -7,6 +7,7 @@
   "author": "Nityanand",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/grep": "^4.0.0",
     "cypress": "^13.17.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "mocha": "^10.0.0",
@@ -15,17 +16,31 @@
     "mochawesome-report-generator": "^4.0.0"
   },
   "scripts": {
-    "errorTest": "echo \"Error: no test specified\" && exit 1",
+    "# Basic Commands #": "",
     "test": "cypress run",
     "cypress:open": "cypress open",
+    "errorTest": "echo \"Error: no test specified\" && exit 1",
+    "# Environment - Open #": "",
     "cy:dev": "CYPRESS_ENV=dev cypress open",
     "cy:stage": "CYPRESS_ENV=stage cypress open",
     "cy:prod": "CYPRESS_ENV=prod cypress open",
+    "# Environment - Run #": "",
     "cy:run:dev": "CYPRESS_ENV=dev cypress run",
     "cy:run:stage": "CYPRESS_ENV=stage cypress run",
     "cy:run:prod": "CYPRESS_ENV=prod cypress run",
+    "# Browser Specific #": "",
     "cy:run:dev:chrome": "CYPRESS_ENV=dev cypress run --browser chrome",
     "cy:run:stage:chrome": "CYPRESS_ENV=stage cypress run --browser chrome",
-    "cy:run:prod:chrome": "CYPRESS_ENV=prod cypress run --browser chrome"
+    "cy:run:prod:chrome": "CYPRESS_ENV=prod cypress run --browser chrome",
+    "# Test Tags #": "",
+    "cy:smoke": "cypress run --env grepTags=@smoke",
+    "cy:sanity": "cypress run --env grepTags=@sanity",
+    "cy:regression": "cypress run --env grepTags=@regression",
+    "# Priority Tags #": "",
+    "cy:critical": "cypress run --env grepTags=@p0",
+    "cy:high": "cypress run --env grepTags=@p1",
+    "# Combined Tags #": "",
+    "cy:smoke:critical": "cypress run --env grepTags=@smoke+@p0",
+    "cy:smoke:lf": "cypress run --env grepTags=@smoke+@lf"
   }
 }
